@@ -150,7 +150,6 @@ buttonadd.onclick = function() {
     index = container.children.length;
 }
 
-
 const button_auto = document.querySelector(".button-auto")
 
 function add_auto() {
@@ -181,7 +180,6 @@ button_auto.onclick = function() {
 const button_stop = document.querySelector(".button-stop");
 
 let intervalId;
-
 button_auto.onclick = function() {
     intervalId = setInterval(add_auto, 1000);
 }
