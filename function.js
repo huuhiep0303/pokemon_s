@@ -187,5 +187,21 @@ button_auto.onclick = function() {
 function stop() {
     clearInterval(intervalId);
 }
-
 button_stop.onclick = stop;
+
+
+const searchInput = document.querySelector(".search");
+searchInput.addEventListener("input", search);
+
+function search() {
+    const searchTerm = searchInput.value.toLowerCase();
+    const elements = document.querySelectorAll(".elements");
+    elements.forEach(element => {
+        const name = element.querySelector(".name").textContent.toLowerCase();
+        if (name.includes(searchTerm)) {
+            element.style.display = "flex";
+        } else {
+            element.style.display = "none";
+        }
+    });
+}
